@@ -22,4 +22,9 @@
  */
 int stringL(char *s);
 
+typedef struct {
+    int value;
+    int index;
+} HashEntry;
+
 #endif

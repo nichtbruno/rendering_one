@@ -7,6 +7,7 @@
 #include <SDL2/SDL_video.h>
 
 #include "globals.h"
+#include "utils.h"
 
 int main() {
     SDL_Window *window;
@@ -23,6 +24,9 @@ int main() {
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "Couldn't create window and renderer: %s", SDL_GetError());
         return 3;
     }
+
+    HashEntry *hashmap = (HashEntry*)malloc(10*sizeof(HashEntry));
+    free(hashmap);
 
     while(1) {
         SDL_PollEvent(&event);
